@@ -44,7 +44,7 @@ class Film
 
     public static function vratiSve($db, $uslov)
     {
-        $query = "SELECT * FROM film f JOIN vrste v ON f.vrsta_fk=v.id_vrste" . $uslov;
+        $query = "SELECT * FROM film f JOIN vrsta v ON f.vrsta_fk=v.id_vrste" . $uslov;
         $query = trim($query);
         $result = $db->query($query) or die($db->error);
         $array = [];
