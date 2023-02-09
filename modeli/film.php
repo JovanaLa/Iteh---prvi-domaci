@@ -56,6 +56,12 @@ class Film
         return $array;
     }
 
+    public static function vratiFilmove($db)
+    {
+        $query = "SELECT * FROM film f JOIN vrsta v ON f.vrsta_fk=v.id_vrste";
+        return $db->query($query);
+    }
+
 }
 
 

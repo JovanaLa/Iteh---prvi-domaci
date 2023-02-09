@@ -36,6 +36,10 @@ if (isset($_POST['dodaj'])) {
 
 
 <head>
+    <?php
+    include('head.php');
+    ?>
+
 
     <title>Unos novog filma</title>
 </head>
@@ -44,7 +48,9 @@ if (isset($_POST['dodaj'])) {
     <div id="background-img">
     </div>
 
-
+    <?php
+    include('header.php');
+    ?>
 
     <div class="row">
         <div id="uni-logos-wrapper" class="col-12">
@@ -53,7 +59,6 @@ if (isset($_POST['dodaj'])) {
     </div>
     <div id="inser-form" class="row form-container">
         <div class="col-md-2"></div>
-        <div id="teatar-bg-img" class="col-md-4"></div>
         <div class="col-md-4">
             <form name="unosFilma" action="" onsubmit="return validateForm()" method="POST" role="form">
                 <div class="form-group">
