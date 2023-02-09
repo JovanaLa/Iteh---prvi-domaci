@@ -1,17 +1,7 @@
-<!DOCTYPE html>
-<div id="menu" class="row">
-    <div class="col-12 topnav" id="myTopnav">
-        <a href="../index.php">Početna</a>
-        <a href="unosfilma.php">Unos novih filmova</a>
-        <a href="../repertoar.php">Repertoar</a>
-        <a href="../pretraga.php">Pretraga</a>
-
-    </div>
-</div>
 <?php
-include "../konekcija.php";
-include "../modeli/film.php";
-include "../modeli/vrsta.php";
+include "konekcija.php";
+include "modeli/film.php";
+include "modeli/vrsta.php";
 
 
 $vrsta = Vrsta::vratiSve($mysqli);
@@ -37,6 +27,7 @@ if (isset($_POST['dodaj'])) {
     $film = new Film(null, $naslov, $cena, $trajanje, $vreme_projekcije, $vrsta);
 
     $film->ubaciFilm($data, $mysqli);
+    header("Location:repertoar.php");
 
 }
 ?>
@@ -46,7 +37,7 @@ if (isset($_POST['dodaj'])) {
 
 <head>
 
-    <title>Unos novoh filma</title>
+    <title>Unos novog filma</title>
 </head>
 
 <body>
@@ -64,7 +55,7 @@ if (isset($_POST['dodaj'])) {
         <div class="col-md-2"></div>
         <div id="teatar-bg-img" class="col-md-4"></div>
         <div class="col-md-4">
-            <form name="unosPredstave" action="" onsubmit="return validateForm()" method="POST" role="form">
+            <form name="unosFilma" action="" onsubmit="return validateForm()" method="POST" role="form">
                 <div class="form-group">
                     <label for="naslov">Naslov filma:</label>
                     <input type="text" class="form-control" name="naslov" id="naslov"
@@ -83,7 +74,7 @@ if (isset($_POST['dodaj'])) {
                 </div>
 
                 <div class="form-group">
-                    <label for="vreme_projekcije">Datum izvodjenja filma:</label>
+                    <label for="vreme_projekcije">Vreme projekcije filma:</label>
                     <input type="text" class="form-control" name="vreme_projekcije" id="vreme_projekcije"
                         placeholder="Unesite vreme projekcije filma">
 

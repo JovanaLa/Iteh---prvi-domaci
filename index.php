@@ -1,6 +1,10 @@
+<!DOCTYPE html>
 <html>
 
 <head>
+    <?php
+    include('head.php');
+    ?>
     <title>Cineplexx</title>
 </head>
 
@@ -19,7 +23,7 @@
     <div id="welcome-div" class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
-            <a href="hendleri\unosfilma.php" class="btn-round-custom">Unos novog filma</a>
+            <a href="hendleri/unosfilma.php" class="btn-round-custom">Unos novog filma</a>
             <a href="repertoar.php" class="btn-round-custom">Repertoar</a>
             <a href="pretraga.php" class="btn-round-custom">Pretraga filmova</a>
         </div>

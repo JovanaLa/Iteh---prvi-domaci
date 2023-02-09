@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <?php
 include "konekcija.php";
 include "modeli/vrsta.php";
@@ -12,7 +11,7 @@ $vrsta = Vrsta::vratiSve($mysqli);
 
 
 
-if (isset($_POST['dodaj'])) {
+if (isset($_POST['update'])) {
 
     $naslov = trim($_POST['naslov']);
     $cena = trim($_POST['cena']);
@@ -20,15 +19,17 @@ if (isset($_POST['dodaj'])) {
     $vreme_projekcije = trim($_POST['vreme_projekcije']);
     $vrsta = $_POST['vrsta'];
 
-    $mysqli->query("UPDATE film SET naslov='$naslov', cena='$cena', trajanje='$trajanje', vreme_projekcije ='vreme_projekcije,id_vrste='$vrsta' WHERE id_film=$id");
-    header('location: izmenafilma.php');
+    $mysqli->query("UPDATE film SET naslov='$naslov', cena='$cena', trajanje='$trajanje', vreme_projekcije ='$vreme_projekcije',vrsta_fk='$vrsta' WHERE id_filma=$id");
+    header('location: repertoar.php');
 }
 ?>
 
 <html>
 
 <head>
-
+    <?php
+    include('head.php');
+    ?>
 
     <title>Izmena filma</title>
 
@@ -38,7 +39,7 @@ if (isset($_POST['dodaj'])) {
     <div id="background-img">
     </div>
     <?php
-        include('header.php');
+    include('header.php');
     ?>
     <div class="row">
         <div id="uni-logos-wrapper" class="col-12">
@@ -46,7 +47,6 @@ if (isset($_POST['dodaj'])) {
     </div>
     <div id="inser-form" class="row form-container">
         <div class="col-md-2"></div>
-        <div id="teatar-bg-img" class="col-md-4"></div>
         <div class="col-md-4">
 
             <form style="padding: 15px;" class="form-horizontal" method="post" action="" role="form">

@@ -31,7 +31,7 @@ class Film
 
         } else {
 
-            $save = $db->query("INSERT INTO film(naslov,cena,trajanje,vreme_projekcije,id_vrste) VALUES ('" . $data['naslov'] . "','" . $data['cena'] . "','" . $data['trajanje'] . "','" . $data['vreme_projekcije'] . "','" . $data['id_vrste'] . "')") or die($db->error);
+            $save = $db->query("INSERT INTO film(naslov,cena,trajanje,vreme_projekcije,vrsta_fk) VALUES ('" . $data['naslov'] . "','" . $data['cena'] . "','" . $data['trajanje'] . "','" . $data['vreme_projekcije'] . "','" . $data['id_vrste'] . "')") or die($db->error);
             if ($save) {
                 echo 'Film je uspešno dodat';
             } else {
