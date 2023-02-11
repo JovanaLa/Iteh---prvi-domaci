@@ -57,7 +57,7 @@ if (isset($_POST['dodaj'])) {
 
         </div>
     </div>
-    <div id="inser-form" class="row form-container">
+    <div id="insert-form" class="row form-container">
         <div class="col-md-2"></div>
         <div class="col-md-4">
             <form name="unosFilma" action="" onsubmit="return validateForm()" method="POST" role="form">

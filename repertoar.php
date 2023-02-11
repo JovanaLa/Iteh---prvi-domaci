@@ -47,7 +47,7 @@ include "modeli/film.php";
         <input type="text" id="cena" onkeyup="funkcijaZaPretragu1()" placeholder="Pretrazi filmove">
       </div>
       <div class="col-3">
-        <label>Pretrazi po naslov </label>
+        <label>Pretrazi po naslovu </label>
         <input type="text" id="naslov" onkeyup="funkcijaZaPretragu2()" placeholder="Pretrazi filmove">
       </div>
     </div>

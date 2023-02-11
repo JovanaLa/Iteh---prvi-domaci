@@ -70,14 +70,12 @@ $filmovi = Film::vratiSve($mysqli, $uslov);
                                 </td>
                                 <td><a href="brisanjefilma.php?id=<?php echo $film->id_filma; ?>">
                                         <div class="form-group">
-                                            <button type="submit" id="obrisi" name="obrisi"
-                                                class="btn-round-custom">Obrisi</button>
+                                            <img class="icon-images" src="images/trash.png" width="20px" height="20px" />
                                         </div>
                                     </a>
                                     <a href="izmenafilma.php?id=<?php echo $film->id_filma; ?>">
                                         <div class="form-group">
-                                            <button type="submit" id="izmeni" name="dodaj"
-                                                class="btn-round-custom">Izmeni</button>
+                                            <img class="icon-images" src="images/edit.png" width="20px" height="20px" />
                                         </div>
                                     </a>
                                 </td>

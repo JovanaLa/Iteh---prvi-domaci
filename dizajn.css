@@ -15,9 +15,6 @@ a.column_sort {
 body{
   z-index: -3;
 }
-#ol-c1{
-  text-align: left;
-}
 
 #uni-logos-wrapper{
   text-align: center;
@@ -38,7 +35,7 @@ body{
 .btn-round-custom:focus,
 .btn-round-custom:active{
   padding: 10px 35px;
-  border-radius: 10px;
+  border-radius: 20px;
   background-color: black;
   color: white;
   border: none;
@@ -56,15 +53,14 @@ body{
 }
 
 #welcome-div{
-  background-color: rgba(111, 108, 108, 0.36);
+  background-color: rgba(252, 252, 252, 0.36);
   padding: 5% 0;
   text-align: center;
-
+  
 }
 #welcome-h1{
   color: #ddd;
 }
-
 
 #background-img{
   content: " ";
@@ -92,24 +88,17 @@ label{
 }
 
 .table{
-  color: #696464;
+  color: #ddd;
 }
 table>tbody>tr:hover{
   background-color: rgba(177, 168, 168, 0.5) !important;
   color: white;
 }
-
-#sort>a{
-padding: 5px;
-border: solid 1px   #797979;
-background-color:   #797979;
-color: azure;
-margin: 5px;
-border-radius: 3px;
+.icon-images{
+margin: 2px;
 }
-#sort>a:hover{
-text-decoration: none;
-padding: 7px;
+.icon-images:hover{
+padding: 3px;
 }
 /*RESPONSIVE NAVIGATION BAR*/
 

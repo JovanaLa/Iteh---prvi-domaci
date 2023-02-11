@@ -45,7 +45,7 @@ if (isset($_POST['update'])) {
         <div id="uni-logos-wrapper" class="col-12">
         </div>
     </div>
-    <div id="inser-form" class="row form-container">
+    <div id="insert-form" class="row">
         <div class="col-md-2"></div>
         <div class="col-md-4">
 
